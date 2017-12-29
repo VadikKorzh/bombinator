@@ -1,0 +1,22 @@
+﻿<Window x:Class="Bombinator.CanvasWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bombinator"
+        mc:Ignorable="d"
+        Title="CanvasWindow" Height="500" Width="500">
+    <Canvas>
+        <ComboBox Canvas.Top="10" Canvas.Left="100">
+            <ComboBox.Items>
+                <ComboBoxItem>sdfsd</ComboBoxItem>
+                <ComboBoxItem>sdfsd</ComboBoxItem>
+                <ComboBoxItem>sdfsd</ComboBoxItem>
+                <ComboBoxItem>sdfsd</ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+        <Calendar Canvas.Bottom="10" Height="94" Canvas.Top="291" Width="138" Canvas.Left="121">
+            
+        </Calendar>
+    </Canvas>
+</Window>

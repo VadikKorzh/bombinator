@@ -10,31 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Bombinator
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DockPanelWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DockPanelWindow : Window
     {
-        public MainWindow()
+        public DockPanelWindow()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            skripkaDima.Content = "Чо ты клёничаиш?";
-        }
-    }
-}
-namespace EEE
-{
-    public static class CCC
-    {
-        public static String A = "AAAAAAA";
     }
 }

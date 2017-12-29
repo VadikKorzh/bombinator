@@ -1,0 +1,97 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bombinator"
+        xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" x:Class="Bombinator.DmeProjectManagement"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"   
+        mc:Ignorable="d"
+        Title="DmeProjectManagement"
+        Height="585" Width="817.892" 
+    >
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New"
+                        Executed="NewCmdExecuted"
+                        CanExecute="SaveCmdCanExecute" />
+        <CommandBinding Command="ApplicationCommands.Open"
+                        Executed="OpenCmdExecuted"
+                        CanExecute="OpenCmdCanExecute" />
+        <CommandBinding Command="ApplicationCommands.Save"
+                        Executed="SaveCmdExecuted"
+                        CanExecute="SaveCmdCanExecute" />
+        <CommandBinding Command="ApplicationCommands.SaveAs"
+                        Executed="OpenCmdExecuted"
+                        CanExecute="OpenCmdCanExecute" />
+        <CommandBinding Command="ApplicationCommands.Close"
+                        Executed="SaveCmdExecuted"
+                        CanExecute="SaveCmdCanExecute" />
+    </Window.CommandBindings>
+    
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top"
+              FontSize="12pt"
+              Padding="5"
+              Background="LightSteelBlue">
+            <MenuItem Header="_Project" ToolTip="Project Management">
+               
+                <Separator/>
+                <MenuItem Header="_New"
+                          Command="ApplicationCommands.New">
+                </MenuItem>
+                <MenuItem Header="_Open"
+                          Command="ApplicationCommands.Open">
+                </MenuItem>
+                <MenuItem Header="_Save"
+                          Command="ApplicationCommands.Save">
+                </MenuItem>
+                <MenuItem Header="_Save As..."
+                          Command="ApplicationCommands.SaveAs">
+                </MenuItem>
+                <MenuItem Header="_Close"
+                          Command="ApplicationCommands.Close">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Settings"/>
+        </Menu>
+        <!--<ToolBarPanel DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Click="Button_Click">
+                    <Image Source="{dxc:DXImageGrayscale Image=Delete_32x32.png}" Height="16" VerticalAlignment="Top"></Image>
+                </Button>
+                <Button Content="Delete" Command="ApplicationCommands.Cut">
+                </Button>
+            </ToolBar>
+        </ToolBarPanel>-->
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="Ready">
+                </TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+
+        <dxa:AccordionControl DockPanel.Dock="Left">
+            <dxa:AccordionItem Header="Project Management">
+                <dxa:AccordionItem Glyph="{dxc:DXImageGrayscale Image=New_16x16.png}"  Header="Create Project"/>
+                <dxa:AccordionItem Header="Save Project"
+                                   Glyph="{dxc:DXImageGrayscale Image=Save_16x16.png}"
+                                   />
+                <dxa:AccordionItem Header="Close Project" Glyph="{dxc:DXImageGrayscale Image=Close_16x16.png}"/>
+                <Separator/>
+                <dxa:AccordionItem Header="Settings" Glyph="{dxc:DXImageGrayscale Image=Customization_16x16.png}"/>
+                <Separator/>
+                <dxa:AccordionItem Header="Exit" MouseDoubleClick="AccordionItem_MouseDown"/>
+            </dxa:AccordionItem>
+            <dxa:AccordionItem Header="Data Sources"/>
+            <dxa:AccordionItem Header="Data Profile"/>
+        </dxa:AccordionControl>
+
+        <!--<DataGrid DockPanel.Dock="Right">
+
+        </DataGrid>-->
+        <TextBox AcceptsReturn="True">
+            
+        </TextBox>
+
+    </DockPanel>
+</Window>

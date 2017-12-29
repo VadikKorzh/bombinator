@@ -1,0 +1,32 @@
+﻿<Window x:Class="Bombinator.WrapPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bombinator"
+        mc:Ignorable="d"
+        Title="WrapPanelWindow" Height="85.5" Width="242.5">
+    <WrapPanel ItemWidth="150">
+        <WrapPanel.Orientation>Vertical</WrapPanel.Orientation>
+        <RepeatButton Width="100"
+                      Height="30"
+                      Delay="0"
+                      Interval="100"
+                      Content="Enlarge"
+                      Click="RepeatButton_Click" Margin="25,0"/>
+        <RepeatButton Width="100"
+                      Height="30"
+                      Delay="0"
+                      Interval="100"
+                      Content="Diminish"
+                      Click="RepeatButton_Click_1"/>
+        <Ellipse x:Name="DynEllipse"
+                 Width="50.0"
+                 Height="50.0"
+                 MinWidth="30.0"
+                 MinHeight="30.0"
+                 MaxWidth="500.0"
+                 MaxHeight="500.0"
+                 Fill="DarkOrange"/>
+    </WrapPanel>
+</Window>

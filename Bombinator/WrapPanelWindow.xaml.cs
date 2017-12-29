@@ -10,31 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Bombinator
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WrapPanelWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WrapPanelWindow : Window
     {
-        public MainWindow()
+        public WrapPanelWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void RepeatButton_Click(object sender, RoutedEventArgs e)
         {
-            skripkaDima.Content = "Чо ты клёничаиш?";
+            this.DynEllipse.Width += 10.0;
+            this.DynEllipse.Height += 10.0;
         }
-    }
-}
-namespace EEE
-{
-    public static class CCC
-    {
-        public static String A = "AAAAAAA";
+
+        private void RepeatButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.DynEllipse.Width -= 10.0;
+            this.DynEllipse.Height -= 10.0;
+        }
     }
 }
